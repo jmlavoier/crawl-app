@@ -1,11 +1,16 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
+import Accordion from 'components/accordion';
+
 const root = document.getElementById('root');
 
 function App() {
   return (
-    <div>Init React</div>
+    <div>
+      <div>Init React</div>
+      <Accordion />
+    </div>
   );
 }
 

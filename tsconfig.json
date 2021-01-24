@@ -1,7 +1,11 @@
 {
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/handbook.ts"],
+  "exclude": ["dist", "node_modules"],
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*"]
+    },
     "outDir": "dist",
     "strictNullChecks": true,
     "noImplicitAny": true,
@@ -10,7 +14,7 @@
     "strictBindCallApply": true,
     "allowSyntheticDefaultImports" : true,
     "sourceMap": true,
-    "module": "es6",
+    "module": "CommonJS",
     "target": "es5",
     "jsx": "react"
   }

@@ -8,5 +8,10 @@
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
     "strictBindCallApply": true,
+    "allowSyntheticDefaultImports" : true,
+    "sourceMap": true,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react"
   }
 }

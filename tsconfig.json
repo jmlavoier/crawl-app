@@ -1,6 +1,12 @@
 {
   "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/handbook.ts"],
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "strictBindCallApply": true,
   }
 }

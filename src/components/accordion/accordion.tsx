@@ -9,7 +9,7 @@ interface Props {
 function Accordion({ name }: Props): JSX.Element {
   return (
     <Wrapper>
-      {``}
+      {`Accordion Component It is An ${name}`}
     </Wrapper>
   );
 }

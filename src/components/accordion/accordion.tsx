@@ -2,11 +2,15 @@ import * as React from 'react';
 
 import { Wrapper } from './styles';
 
-interface Props {}
+interface Props {
+  name: unknown,
+}
 
-function Accordion(props: Props): JSX.Element {
+function Accordion({ name }: Props): JSX.Element {
   return (
-    <div>Accordion Component</div>
+    <Wrapper>
+      {`Accordion Component It is An ${name}`}
+    </Wrapper>
   );
 }
 

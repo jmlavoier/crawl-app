@@ -9,12 +9,12 @@ function App() {
   return (
     <div>
       <div>Init React</div>
-      <Accordion />
+      <Accordion name="João" />
     </div>
   );
 }
 
 ReactDOM.render(
-  <App />, 
+  <App />,
   root,
 );

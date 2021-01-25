@@ -9,12 +9,13 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
+  "ignorePatterns": ["**/*.js", "**/*.jsx", "./*.json"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 12,
+    "ecmaVersion": 2020,
     "sourceType": "module",
     "project": ["./**/tsconfig.eslint.json"]
   },
@@ -27,6 +28,14 @@
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
-    "import/prefer-default-export": [0]
+    "import/prefer-default-export": [0],
+    "import/no-extraneous-dependencies": [
+      "error", {
+        "devDependencies": [
+          "./__tests__/**/*.ts", 
+          "./__tests__/**/*.tsx"
+        ]
+      }
+    ]
   }
 }

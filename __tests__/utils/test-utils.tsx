@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from 'react';
 import { render } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
@@ -14,7 +15,7 @@ const AllTheProviders = ({ children }: ProviderProps) => (
 
 const customRender = (
   ui: React.ReactElement,
-): React.ReactNode => render(ui, { wrapper: AllTheProviders });
+): any => render(ui, { wrapper: AllTheProviders });
 
 // re-export everything
 export * from '@testing-library/react';

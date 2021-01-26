@@ -12,7 +12,7 @@ const beforeCss = `
 export const Wrapper = styled.button`
   background-color: #ff5824;
   border: 0;
-  height: 40px;
+  height: 46px;
   padding: 5px 30px;
   border-radius: 25px;
   outline: none;

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import Accordion from 'components/accordion';
+import { Accordion } from 'components';
 
 const root = document.getElementById('root');
 
@@ -14,7 +14,6 @@ function App() {
 
   return (
     <div>
-      <div>Init React</div>
       <Accordion title="Security" onClick={handleClick} open={open}>
         <div>
           <p>This is the text inside the component</p>

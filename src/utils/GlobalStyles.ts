@@ -1,9 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
-import MuseoSansRounded100 from '../../assets/fonts/MuseoSansRounded100.woff';
-import MuseoSansRounded300 from '../../assets/fonts/MuseoSansRounded300.woff';
-import MuseoSansRounded500 from '../../assets/fonts/MuseoSansRounded500.woff';
-import MuseoSansRounded700 from '../../assets/fonts/MuseoSansRounded700.woff';
+import MuseoSansRounded100 from 'assets/fonts/MuseoSansRounded100.woff';
+import MuseoSansRounded300 from 'assets/fonts/MuseoSansRounded300.woff';
+import MuseoSansRounded500 from 'assets/fonts/MuseoSansRounded500.woff';
+import MuseoSansRounded700 from 'assets/fonts/MuseoSansRounded700.woff';
 
 export default createGlobalStyle`
   @font-face {

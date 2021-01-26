@@ -34,9 +34,9 @@ describe('Accordion', () => {
   it('should body not to be visible at first time', () => {
     const title = 'Security';
 
-    const { getByTestId } = render(<Accordion title={title} />);
+    const { container } = render(<Accordion title={title} />);
 
-    expect(getByTestId('body')).not.toBeVisible();
+    expect(container.firstChild).toHaveStyle('max-height: 46px');
   });
 
   it('should body be visible after click', async () => {

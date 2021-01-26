@@ -17,9 +17,9 @@ function Accordion({
   title, children, open, onClick,
 }: Props): JSX.Element {
   return (
-    <Wrapper>
-      <Title data-testid="title" onClick={onClick}>{title}</Title>
-      <Body data-testid="body" open={open}>{children}</Body>
+    <Wrapper open={open}>
+      <Title data-testid="title" onClick={onClick} open={open}>{title}</Title>
+      <Body data-testid="body">{children}</Body>
     </Wrapper>
   );
 }

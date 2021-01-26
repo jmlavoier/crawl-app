@@ -1,7 +1,9 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { Accordion, Text, Input } from 'components';
+import {
+  Accordion, Text, Input, Button,
+} from 'components';
 
 import GlobalStyle from 'utils/GlobalStyles';
 
@@ -17,6 +19,7 @@ function App() {
   return (
     <div>
       <GlobalStyle />
+      <Button>Submit</Button>
       <Input />
       <Accordion title="Security" onClick={handleClick} open={open}>
         <div>

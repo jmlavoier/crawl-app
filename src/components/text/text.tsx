@@ -11,13 +11,19 @@ interface Props {
   size?: number,
   weight?: Weight,
   height?: number,
+  color?: string,
 }
 
 function Text({
-  children, size, weight, height,
+  children, size, weight, height, color,
 }: Props): JSX.Element {
   return (
-    <Wrapper size={size} weight={weight} height={height}>
+    <Wrapper
+      size={size}
+      weight={weight}
+      height={height}
+      color={color}
+    >
       {children}
     </Wrapper>
   );
@@ -28,6 +34,7 @@ Text.defaultProps = {
   size: 18,
   weight: 'normal',
   height: 18,
+  color: '#000',
 };
 
 export default Text;

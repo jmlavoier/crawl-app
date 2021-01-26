@@ -10,25 +10,23 @@ enum Weights {
   fin = 100,
 }
 
+interface Props {
+  size: number,
+  weight: Weight,
+  height: number,
+}
+
 export const Wrapper = styled.p.attrs(
-  (props: {
-    size: number,
-    weight: Weight,
-    height: number
-  }) => ({
-    ...props,
-    size: props.size,
-    weight: props.weight,
-    height: props.height,
-  }),
+  (props: Props) => props,
 )`
   font-family: "Museo Sans Rounded ${({ weight }) => Weights[weight] || '300'}";
   font-size: ${({ size }) => size}px;
+  color: ${({ color }) => color};
   ${({ height }) => (height ? `
     line-height: ${height}px;
     height: ${height}px;
   ` : '')}
-  
+
   font-weight: ${({ weight }) => weight};
   margin: 0;
 `;

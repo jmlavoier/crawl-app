@@ -10,6 +10,7 @@ export const Input = styled.input`
   border-radius: 25px;
   padding: 5px 40px;
   outline: none;
+  transition: border-color .3s;
   
   &:focus {
     border-color: #ff5824;

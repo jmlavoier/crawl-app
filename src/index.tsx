@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { Accordion, Text } from 'components';
+import { Accordion, Text, Input } from 'components';
 
 import GlobalStyle from 'utils/GlobalStyles';
 
@@ -17,6 +17,7 @@ function App() {
   return (
     <div>
       <GlobalStyle />
+      <Input />
       <Accordion title="Security" onClick={handleClick} open={open}>
         <div>
           <Text>This is the text inside the component</Text>

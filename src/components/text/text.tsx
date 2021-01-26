@@ -13,7 +13,7 @@ interface Props {
   height?: number,
 }
 
-function Accordion({
+function Text({
   children, size, weight, height,
 }: Props): JSX.Element {
   return (
@@ -23,11 +23,11 @@ function Accordion({
   );
 }
 
-Accordion.defaultProps = {
+Text.defaultProps = {
   children: null,
   size: 18,
   weight: 'normal',
   height: 18,
 };
 
-export default Accordion;
+export default Text;

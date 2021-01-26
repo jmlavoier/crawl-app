@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 
 const getPropOpen = (props: { open: boolean }) => ({
@@ -14,11 +13,9 @@ export const Wrapper = styled.div.attrs(getPropOpen)`
   box-sizing: border-box;
 `;
 
-export const Title = styled.h4.attrs(getPropOpen)`
+export const Title = styled.div.attrs(getPropOpen)`
   margin: 0;
   height: 40px;
-  font-size: 22px;
-  line-height: 40px;
   position: relative;
   padding-left: 15px;
 

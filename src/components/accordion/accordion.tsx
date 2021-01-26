@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import Text from '../text';
 import {
   Wrapper,
   Title,
@@ -18,7 +19,9 @@ function Accordion({
 }: Props): JSX.Element {
   return (
     <Wrapper open={open}>
-      <Title data-testid="title" onClick={onClick} open={open}>{title}</Title>
+      <Title data-testid="title" onClick={onClick} open={open}>
+        <Text size={22} height={40} weight="semiBold">{title}</Text>
+      </Title>
       <Body data-testid="body">{children}</Body>
     </Wrapper>
   );

@@ -19,7 +19,6 @@ const Header = (): JSX.Element => {
   const [word, setWord] = useState('');
 
   const {
-    data,
     isLoading,
     dispatch,
     error,

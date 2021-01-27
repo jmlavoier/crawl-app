@@ -8,7 +8,7 @@ import {
 
 interface Props {
   value?: string,
-  onChange?: (e?: React.FormEvent<HTMLInputElement>) => void,
+  onChange?: (e: React.FormEvent<HTMLInputElement>) => void,
 }
 
 const { useCallback, useRef } = React;

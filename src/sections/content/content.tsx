@@ -4,7 +4,7 @@ import {
   Accordion,
   Layout,
   Text,
-} from '../../components';
+} from 'components';
 import { StyledContent } from './styles';
 
 const Content = (): JSX.Element => (

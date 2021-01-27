@@ -6,6 +6,11 @@ import MuseoSansRounded500 from 'assets/fonts/MuseoSansRounded500.woff';
 import MuseoSansRounded700 from 'assets/fonts/MuseoSansRounded700.woff';
 
 export default createGlobalStyle`
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
   @font-face {
     font-family: 'Museo Sans Rounded 500';
     font-weight: 500;

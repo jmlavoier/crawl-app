@@ -24,7 +24,7 @@ function Input({
     if (el) {
       el.focus();
     }
-  }, [inputRef.current]);
+  }, []);
 
   return (
     <Wrapper>

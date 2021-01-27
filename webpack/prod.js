@@ -10,6 +10,7 @@ module.exports = merge(webpackCommon, {
   devtool: 'source-map',
 
   plugins: [
+    new Dotenv(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Terms Inspection',

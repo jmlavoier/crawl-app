@@ -13,7 +13,8 @@ export const Wrapper = styled.button`
   background-color: #ff5824;
   border: 0;
   height: 46px;
-  padding: 5px 30px;
+  width: 130px;
+  padding: 5px 15px;
   border-radius: 25px;
   outline: none;
   position: relative;
@@ -56,4 +57,56 @@ export const Wrapper = styled.button`
       animation: feedback-go .5s;
     }
   }
+`;
+
+export const SpinStyle = `
+  @keyframes spin-animation {
+    0% {
+      height: 10px;
+      width: 10px;
+    }
+    50% {
+      height: 4px;
+      width: 4px;
+    }
+    100% {
+      height: 10px;
+      width: 10px;
+    }
+  }
+
+  border-width: 0;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #fff;
+  vertical-align: middle;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-name: spin-animation;
+  height: 10px;
+  width: 10px;
+`;
+
+export const Loading = styled.div`
+  width: 100px;
+  height: 10px;
+  display: inline-block;
+`;
+
+export const Spin1 = styled.span`
+  ${SpinStyle}
+  animation-delay: .1s;
+`;
+
+export const Spin2 = styled.span`
+  ${SpinStyle}
+  margin-left: 7px;
+  margin-right: 7px;
+  animation-delay: .3s;
+`;
+
+export const Spin3 = styled.span`
+  ${SpinStyle}
+  animation-delay: .5s;
 `;

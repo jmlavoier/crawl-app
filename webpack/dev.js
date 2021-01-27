@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 const { merge } = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -15,6 +16,7 @@ module.exports = merge(webpackCommon, {
   devtool: 'inline-source-map',
 
   plugins: [
+    new Dotenv(),
     new HtmlWebpackPlugin({
       title: '[DEV] Terms Inspection',
       template: 'templates/index.html',

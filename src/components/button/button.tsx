@@ -1,12 +1,9 @@
 import * as React from 'react';
 
 import Text from '../text';
+import Loading from '../loading';
 import {
   Wrapper,
-  Loading,
-  Spin1,
-  Spin2,
-  Spin3,
 } from './styles';
 
 interface Props {
@@ -19,11 +16,7 @@ function Button({ children, onClick, isLoading }: Props): JSX.Element {
   return (
     <Wrapper type="button" onClick={() => {}} onMouseDown={onClick}>
       {isLoading ? (
-        <Loading>
-          <Spin1 />
-          <Spin2 />
-          <Spin3 />
-        </Loading>
+        <Loading />
       ) : (
         <Text color="#fff">{children}</Text>
       )}

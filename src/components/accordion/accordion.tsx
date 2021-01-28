@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import { ReactComponent as Wait } from 'assets/icons/wait.svg';
 import { ReactComponent as Sad } from 'assets/icons/sad.svg';
 import { ReactComponent as Ok } from 'assets/icons/ok.svg';
 
+import Loading from '../loading';
 import Text from '../text';
 import Layout from '../layout';
 import {
@@ -27,7 +27,7 @@ function Accordion({
     <Wrapper open={open}>
       <Title data-testid="title" onClick={onClick} open={open}>
         <Layout.Flex p={5}>
-          {status === 'active' && (<Wait width={30} height={30} />)}
+          {status === 'active' && (<Loading color="#000" />)}
           {status === 'empty' && (<Sad width={30} height={30} />)}
           {status === 'done' && (<Ok width={30} height={30} />)}
         </Layout.Flex>

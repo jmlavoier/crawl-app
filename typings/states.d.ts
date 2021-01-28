@@ -8,9 +8,9 @@ interface StateType {
   inspections: InspectionType[],
 }
 
-interface ActionType {
+interface ActionType<P> {
   type: string,
-  payload: unknown,
+  payload: P,
 }
 
 interface ProviderProps {
@@ -19,5 +19,9 @@ interface ProviderProps {
 
 interface ProviderValue {
   state: StateType,
-  setInspection?: (inspection: InspectionType) => void,
+  setInspection: (inspection: InspectionType) => void,
+}
+
+interface SetInspectionPayloadType {
+  inspection: InspectionType,
 }

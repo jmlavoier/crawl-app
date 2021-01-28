@@ -6,9 +6,20 @@ export const initialState: StateType = {
   inspections: [],
 };
 
-const reducer = (state: StateType, action: ActionType): StateType => {
+const reducer = (state: StateType, action: ActionType<SetInspectionPayloadType>): StateType => {
   switch (action.type) {
-    case SET_INSPECTION: return state;
+    case SET_INSPECTION: {
+      const {
+        inspection,
+      } = action.payload;
+
+      return {
+        inspections: [
+          ...state.inspections,
+          inspection,
+        ],
+      };
+    }
     default: return state;
   }
 };

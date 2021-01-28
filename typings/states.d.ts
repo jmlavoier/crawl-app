@@ -5,12 +5,8 @@ interface InspectionType {
 }
 
 interface StateType {
+  hydrated: boolean,
   inspections: InspectionType[],
-}
-
-interface ActionType<P> {
-  type: string,
-  payload: P,
 }
 
 interface ProviderProps {
@@ -20,8 +16,21 @@ interface ProviderProps {
 interface ProviderValue {
   state: StateType,
   setInspection: (inspection: InspectionType) => void,
+  rehydrate: (inspections: InspectionType[]) => void,
 }
 
-interface SetInspectionPayloadType {
-  inspection: InspectionType,
+interface SetInspectionActionType {
+  type: 'SET_INSPECTION',
+  payload: {
+    inspection: InspectionType,
+  },
 }
+
+interface RehydrateActionType {
+  type: 'REHYDRATE',
+  payload: {
+    inspections: InspectionType[],
+  },
+}
+
+type ActionTypes = SetInspectionActionType | RehydrateActionType;

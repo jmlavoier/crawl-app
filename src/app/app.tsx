@@ -1,17 +1,19 @@
 import * as React from 'react';
 
-import Header from '../sections/header';
-import Content from '../sections/content';
+import { Provider } from 'states';
 
-import GlobalStyle from '../utils/global-styles';
+import Header from 'sections/header';
+import Content from 'sections/content';
+
+import GlobalStyle from 'utils/global-styles';
 
 function App(): JSX.Element {
   return (
-    <div>
+    <Provider>
       <GlobalStyle />
       <Header />
       <Content />
-    </div>
+    </Provider>
   );
 }
 

@@ -5,7 +5,7 @@ import {
   Button,
   Layout,
   Text,
-} from '../../components';
+} from 'components';
 import useKeywordPost from './useKeywordPost';
 import {
   StyledHeader, Wrapper, BaloonWrapper, Baloon,

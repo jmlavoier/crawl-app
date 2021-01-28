@@ -1,7 +1,6 @@
 interface InspectionType {
   keyword: string,
   id: string,
-  status: string,
 }
 
 interface StateType {

@@ -30,7 +30,6 @@ const useKeywordPost = (keyword: string): KeywordPostResponse => {
             const inspect: InspectionType = {
               keyword,
               id: res.data.id,
-              status: res.data.status,
             };
             setInspection(inspect);
             data.current = inspect;

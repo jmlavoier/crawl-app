@@ -6,7 +6,8 @@ const getPropOpen = (props: { open: boolean }) => ({
 });
 
 export const Wrapper = styled.div.attrs(getPropOpen)`
-  border: 3px solid #000;
+  border-bottom: 2px solid #000;
+  margin-bottom: 5px;
   max-height: ${({ open }) => (open ? '1000px' : '46px')};
   overflow: hidden;
   transition: max-height 0.5s;

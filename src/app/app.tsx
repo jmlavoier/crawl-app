@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Provider } from 'states';
+import { usePersist } from 'states';
 
 import Header from 'sections/header';
 import Content from 'sections/content';
@@ -8,12 +8,14 @@ import Content from 'sections/content';
 import GlobalStyle from 'utils/global-styles';
 
 function App(): JSX.Element {
+  usePersist();
+
   return (
-    <Provider>
+    <>
       <GlobalStyle />
       <Header />
       <Content />
-    </Provider>
+    </>
   );
 }
 

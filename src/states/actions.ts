@@ -1,12 +1,22 @@
 import {
   SET_INSPECTION,
+  REHYDRATE,
 } from './types';
 
 export const setInspection = (
   inspection: InspectionType,
-): ActionType<SetInspectionPayloadType> => ({
+): ActionTypes => ({
   type: SET_INSPECTION,
   payload: {
     inspection,
+  },
+});
+
+export const rehydrate = (
+  inspections: InspectionType[],
+): ActionTypes => ({
+  type: REHYDRATE,
+  payload: {
+    inspections,
   },
 });

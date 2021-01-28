@@ -1,1 +1,2 @@
 export const SET_INSPECTION = 'SET_INSPECTION';
+export const REHYDRATE = 'REHYDRATE';

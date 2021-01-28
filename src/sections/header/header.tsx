@@ -6,7 +6,7 @@ import {
   Layout,
   Text,
 } from 'components';
-import useKeywordPost from './useKeywordPost';
+import useKeywordPost from './use-keyword-post';
 import {
   StyledHeader, Wrapper, BaloonWrapper, Baloon,
 } from './styles';

@@ -1,11 +1,13 @@
 import {
   SET_INSPECTION,
   REHYDRATE,
+  SET_URLS,
 } from './types';
 
 export const initialState: StateType = {
   hydrated: false,
   inspections: [],
+  urls: {},
 };
 
 const reducer = (
@@ -37,6 +39,27 @@ const reducer = (
         inspections,
       };
     }
+
+    case SET_URLS: {
+      const {
+        id,
+        status,
+        urls,
+      } = action.payload;
+
+      return {
+        ...state,
+        urls: {
+          ...state.urls,
+          [id]: {
+            id,
+            status,
+            urls,
+          },
+        },
+      };
+    }
+
     default: return state;
   }
 };

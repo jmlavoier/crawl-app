@@ -1,6 +1,7 @@
 import {
   SET_INSPECTION,
   REHYDRATE,
+  SET_URLS,
 } from './types';
 
 export const setInspection = (
@@ -18,5 +19,18 @@ export const rehydrate = (
   type: REHYDRATE,
   payload: {
     inspections,
+  },
+});
+
+export const setURLs = (
+  id: string,
+  status: string,
+  urls: string[],
+): ActionTypes => ({
+  type: SET_URLS,
+  payload: {
+    id,
+    status,
+    urls,
   },
 });

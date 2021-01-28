@@ -16,24 +16,19 @@ const usePersist = (): void => {
     const { state: { hydrated }, rehydrate } = context;
     const storedState = window.localStorage.getItem(STORE_NAME);
 
-    console.log('rehydrate', rehydrate);
-    console.log('hydrated', hydrated);
-    console.log('storedState', storedState);
-
     if (!hydrated && storedState) {
       rehydrate(JSON.parse(storedState));
     }
 
     return () => {
       const { state: { inspections } } = context;
-      console.log('update');
-      console.log('rehydrate', rehydrate);
-      console.log('inspections', inspections);
 
-      window.localStorage.setItem(
-        STORE_NAME,
-        JSON.stringify(inspections),
-      );
+      if (inspections.length) {
+        window.localStorage.setItem(
+          STORE_NAME,
+          JSON.stringify(inspections),
+        );
+      }
     };
   }, [context]);
 };

@@ -3,9 +3,20 @@ interface InspectionType {
   id: string,
 }
 
+interface InspectionGetResponseType {
+  id: string,
+  status: string,
+  urls: string[],
+}
+
+interface InspectionURLsType {
+  [id: string]: InspectionGetResponseType,
+}
+
 interface StateType {
   hydrated: boolean,
   inspections: InspectionType[],
+  urls: InspectionURLsType,
 }
 
 interface ProviderProps {
@@ -16,6 +27,7 @@ interface ProviderValue {
   state: StateType,
   setInspection: (inspection: InspectionType) => void,
   rehydrate: (inspections: InspectionType[]) => void,
+  setURLs: (inspectionId: string, status: string, urls: string[]) => void,
 }
 
 interface SetInspectionActionType {
@@ -32,4 +44,9 @@ interface RehydrateActionType {
   },
 }
 
-type ActionTypes = SetInspectionActionType | RehydrateActionType;
+interface SetURLsActionType {
+  type: 'SET_URLS',
+  payload: InspectionGetResponseType,
+}
+
+type ActionTypes = SetInspectionActionType | RehydrateActionType | SetURLsActionType;

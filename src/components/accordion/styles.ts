@@ -7,17 +7,19 @@ const getPropOpen = (props: { open: boolean }) => ({
 
 export const Wrapper = styled.div.attrs(getPropOpen)`
   border: 3px solid #000;
-  max-height: ${({ open }) => (open ? '400px' : '46px')};
+  max-height: ${({ open }) => (open ? '1000px' : '46px')};
   overflow: hidden;
   transition: max-height 0.5s;
   box-sizing: border-box;
 `;
 
 export const Title = styled.div.attrs(getPropOpen)`
+  display: flex;
   margin: 0;
   height: 40px;
   position: relative;
   padding-left: 15px;
+  cursor: pointer;
 
   &:after {
     content: "";

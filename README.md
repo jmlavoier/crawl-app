@@ -70,7 +70,7 @@ Por preferência/costume, foi utilizado o `yarn` como gerênciador de pacotes, m
 
 Clone o repositório dentro do diretório do seu workspace. 
 ```bash
-$ git@github.com:jmlavoier/crawl-app.git
+$ git clone git@github.com:jmlavoier/crawl-app.git
 ```
 
 ## Variável de ambiente
@@ -118,3 +118,17 @@ ou
 
 $ npm test:watch
 ```
+
+#### Lint
+
+```bash
+$ yarn lint
+
+ou 
+
+$ npm lint
+```
+
+#### Troubleshoting
+
+Caso você não utilize um sistema operacional **Unix** poderá ter problemas com o **Lint**. Neste caso, se precisar fazer um teste será necessário ir até o arquivo de configuração do Eslint `./eslintrc.json` e na linha `27` alterar a regra `"linebreak-style": ["error", "unix"]` para o SO que está utiliando, por exemplo, ser for *Windows* ficaria `"linebreak-style": ["error", "windows"]`.

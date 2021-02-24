@@ -54,6 +54,8 @@ Os dumb components, resonsáveis pela UI da aplicação. Estes componentes não 
 
 ## Testes & ESLint
 
+teste
+
 Os testes ficam no diretório `__testes__` na raiz do projeto. Para isso foi utilizado o **Jest** e **React Testing Library**. Foi possível realizar somente os teste de alguns componentes do diretório `components`. 
 
 O ESLint foi configurado com alguns plugins para auxiciliar no desenvolvimento utilizando Typescript como `airbnb-typescript`, `plugin:@typescript-eslint/recommended` entre outros que servem para garantir a qualidade da aplicação, previnindo problemas com as dependencias dos hooks.

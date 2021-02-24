@@ -75,7 +75,7 @@ $ git clone git@github.com:jmlavoier/crawl-app.git
 
 ## Variável de ambiente
 
-Para o correto functionamento do app, é imprescindível que se crie a variável de ambiente `TESTAPI_HOST`. Para isso, crie um arquivo `.env` com essa variável na raiz do projeto. Isso foi criado para não expor a URL do host do projeto, conforme foi requirido na teste.
+Para o correto funcionamento do app, é imprescindível que se crie a variável de ambiente `TESTAPI_HOST`. Para isso, crie um arquivo `.env` com essa variável na raiz do projeto. Isso foi criado para não expor a URL do host do projeto, conforme foi requirido na teste.
 
 ```
 TESTAPI_HOST=http://host.de.exemplo.com/3000
